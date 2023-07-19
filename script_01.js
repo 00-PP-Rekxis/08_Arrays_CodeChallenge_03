@@ -18,10 +18,19 @@ output(getSentence(["Ich","bin"],"E"));
 output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
 
 function getSentence(arr,op) {
-   
-   
-   
-     return "toDo";
+    const GAP = " ";
+    switch (op) {
+        case "S":
+            op = "."
+            break;
+        case "Q":
+            op = "?"
+            break;        
+        case "E":
+            op = "!"
+            break;
+    }
+    return arr.join(GAP) + op;
 }
 
 
