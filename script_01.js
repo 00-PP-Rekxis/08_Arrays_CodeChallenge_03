@@ -1,4 +1,4 @@
-
+"use strict";
 /*** Mini-Challenge  */
 // Satzbau + Punktuation
 
@@ -20,10 +20,10 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
 function getSentence(arr,op) {
     const GAP = " ";
     
-    return arr.join(GAP) + punktuation(op);
+    return arr.join(GAP) + getPunctuation(op);
 }
 
-function punktuation(op) {
+function getPunctuation(op) {
     if (op == "S") {
         op = "."
     } else if (op == "Q") {
@@ -33,8 +33,6 @@ function punktuation(op) {
     }
     return op;
 }
-
-
 
 // Modul: Ausgabe in Konsole : Test
 // output("hi"); 
