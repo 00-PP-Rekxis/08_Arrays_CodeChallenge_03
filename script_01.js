@@ -19,18 +19,19 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
 
 function getSentence(arr,op) {
     const GAP = " ";
-    switch (op) {
-        case "S":
-            op = "."
-            break;
-        case "Q":
-            op = "?"
-            break;        
-        case "E":
-            op = "!"
-            break;
+    
+    return arr.join(GAP) + punktuation(op);
+}
+
+function punktuation(op) {
+    if (op == "S") {
+        op = "."
+    } else if (op == "Q") {
+        op = "?"
+    } else {
+        op = "!"
     }
-    return arr.join(GAP) + op;
+    return op;
 }
 
 
